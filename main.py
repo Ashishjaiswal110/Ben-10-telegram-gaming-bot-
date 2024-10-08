@@ -5,7 +5,7 @@ import time
 
 API_TOKEN =  "7886745619:AAHqSMos7BAoVtiVa9k-CMbz_AFG0SrEorE" # Replace with your bot token
 bot = telebot.TeleBot(API_TOKEN)
-# Store player data
+# Store player data 
 players = {}
 leaderboard = {}
 # Load leaderboard from file
