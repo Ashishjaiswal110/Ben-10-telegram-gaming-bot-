@@ -24,7 +24,7 @@ def save_leaderboard():
 
 # Call load_leaderboard at the start of your bot
 load_leaderboard()
-
+save_leaderboard()
 
 
 # Aliens dictionary with their abilities and power
