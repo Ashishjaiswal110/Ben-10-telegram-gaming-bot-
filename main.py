@@ -25,11 +25,7 @@ def save_leaderboard():
 # Call load_leaderboard at the start of your bot
 load_leaderboard()
 
-# Update the score in the file when a player wins
-if result == "win":
-    players[user_id]['score'] += 10
-    leaderboard[message.from_user.first_name] = players[user_id]['score']
-    save_leaderboard()  # Save the updated leaderboard
+
 
 # Aliens dictionary with their abilities and power
 aliens = {
