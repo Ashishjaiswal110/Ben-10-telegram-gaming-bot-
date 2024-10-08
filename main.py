@@ -1,8 +1,9 @@
 import telebot
+import os
 import random
 import time
 
-API_TOKEN = 'YOUR_API_KEY_HERE'  # Replace with your bot token
+API_TOKEN =  os.getenv("TELEGRAM_TOKEN") # Replace with your bot token
 bot = telebot.TeleBot(API_TOKEN)
 # Store player data
 players = {}
