@@ -1,13 +1,35 @@
 import telebot
 import os
 import random
-import time
+import time 
 
 API_TOKEN =  "7886745619:AAHqSMos7BAoVtiVa9k-CMbz_AFG0SrEorE" # Replace with your bot token
 bot = telebot.TeleBot(API_TOKEN)
 # Store player data
 players = {}
 leaderboard = {}
+# Load leaderboard from file
+def load_leaderboard():
+    if os.path.exists('leaderboard.txt'):
+        with open('leaderboard.txt', 'r') as file:
+            for line in file:
+                name, score = line.strip().split(': ')
+                leaderboard[name] = int(score)
+
+# Save leaderboard to file
+def save_leaderboard():
+    with open('leaderboard.txt', 'w') as file:
+        for player, score in leaderboard.items():
+            file.write(f"{player}: {score}\n")
+
+# Call load_leaderboard at the start of your bot
+load_leaderboard()
+
+# Update the score in the file when a player wins
+if result == "win":
+    players[user_id]['score'] += 10
+    leaderboard[message.from_user.first_name] = players[user_id]['score']
+    save_leaderboard()  # Save the updated leaderboard
 
 # Aliens dictionary with their abilities and power
 aliens = {
