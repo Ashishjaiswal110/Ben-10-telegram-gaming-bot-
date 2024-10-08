@@ -1,5 +1,4 @@
-name: Run Ben 10 Bot
-
+name: Ben 10
 on:
   push:
     branches:
@@ -28,4 +27,4 @@ jobs:
 
     - name: Run the bot
       run: |
-        python bot.py
+        python main.py
